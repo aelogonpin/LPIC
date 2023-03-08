@@ -1,0 +1,53 @@
+cat /proc/cpuinfo -> Información del procesador, caracteristicas, empresa que lo fabrica...
+cat /proc/meminfo -> Informacion de memoria total, disponible, swap, cache...
+cat /proc/partitions -> Particiones fisicas y memorias ram
+cat /proc/interrupts -> La tabla de interrupciones del sistema linux " Proceso de llamadas elementos hardware a la cpu llamandolas interrupciones mediante una carga de forma prioritaria"
+cat /proc/ioports -> Nos muestra la informacion de los bancos de memoria y ubicaciones y diversos dispositivos en este banco de memoria, esta ram visualiza estos ubicados en forma hexadecimal representado lo que se a cargado en el segmento de la memoria ram
+cat /proc/dma -> Nos muestras las direcciones de acceso directo a memoria "Tecnica que tienen maquinas que permiten acceder desde cpu a dispositivo sin pasar por la memoria ram determinado en este fichero".
+
+Tipos de dispositivos:
+Coldplug (Se deben conectar y desconectar cuando esta apagado el equipo)
+Hotplug (Permite conectar y desconetar teniendo la maquina encendida o dicho de otra manera en "caliente")
+
+Gestion de dispositivos:
+Dispositivos -> [Sysfs /sys & Udev /dev] -> D-bus -> Espacio de usuario
+/sys:
+Un sistema de fichero virtual en donde exporta la información y los controladores del dispositvo que se conecta.
+/dev:
+Permite una ubicacion en el sistema de fichero donde permite que el dispositivo genera un punto de actuacion en el espacio de usuario usando un fichero mencionado.
+D-BUS:
+Demonio que permite la comunicación entre eventos que nos permiten realizar una accion en el espacio de usuarios "Alerta de cuando ponemos el pen y dice de seleccionar".
+
+Espacio de usuario:
+Donde nosotros vemos la información o todo lo relacionado con los dispositivos.
+
+
+
+
+
+
+Dispositivos PCI:
+
+Comandos:
+lspci: Permite el listado de los dispositivos pci que estan en el sistema.
+lspci -t: Muestra la lista de los buses pci que exiten.
+lspci -nn: Muestra la informacion del fabricanete,funcion,nombre y codigo numerico del pci.
+
+
+Ejemplo:
+    03:00.0 3D controller: NVIDIA Corporation GK208BM [GeForce 920M] (rev a1)
+    [BUS-PCI]   [Elementos PCI]   [Nombre del elementos o fabricante]
+
+  
+
+update-pciids: Consulta de datos de internet con nuestros dispositivos fisicos.
+
+setpci: Configurar dispositivos PCI
+
+
+
+
+Modulos del kernel:
+
+
+
